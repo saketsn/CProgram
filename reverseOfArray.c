@@ -6,6 +6,18 @@ void rev(int size,int arr[size]){
     }
 
 }
+//using swap method to reversal an array
+void revSwap(int size, int arr[size]){
+    int temp;
+    for(int i = 0;i<size/2;i++){
+        temp = arr[i];
+        arr[i] = arr[size-1];
+        arr[size -1] = temp;
+    }
+    for(int i = 0;i<size;i++){
+        printf("%d\t",arr[i]);
+    }
+}
 
 void insert(int size,int arr[size]){
     for(int i =0;i<size;i++){
@@ -22,7 +34,8 @@ int main(){
     scanf("%d",&size);
      int arr[size];
     insert(size,arr);
-    rev(size,arr);
+   // rev(size,arr);
+   revSwap(size,arr);
 
     return 0;
 
